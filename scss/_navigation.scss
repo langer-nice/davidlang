@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 .site-header{background:#fff;border-bottom:1px solid rgba(0,0,0,.06)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem}
 .lang-switch{display:flex;gap:.5rem;align-items:center}

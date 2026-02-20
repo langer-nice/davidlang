@@ -1,14 +1,116 @@
-*{box-sizing:border-box}
-body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;line-height:1.4;color:#1f2937;background:#f7f7fb;margin:0}
-.container{max-width:1100px;margin:0 auto;padding:1rem}
-.site-header{background:#fff;border-bottom:1px solid rgba(0,0,0,.06)}
-.header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem}
-.lang-switch{display:flex;gap:.5rem;align-items:center}
-.lang-switch button{background:transparent;border:1px solid rgba(0,0,0,.08);padding:.4rem .6rem;border-radius:4px;cursor:pointer}
-.lang-switch .github{margin-left:.6rem;color:#1f2937;text-decoration:none;font-size:.9rem}
-.main-content{padding:2rem 1rem}
-.lead{font-size:1.125rem;margin:0 0 1rem}
-.cta{margin-top:1.5rem}
-.btn{display:inline-block;padding:.6rem 1rem;background:#0b75ff;color:#fff;border-radius:6px;text-decoration:none}
-.site-footer{padding:1rem 0;background:transparent;border-top:1px solid rgba(0,0,0,.04)}
-@media (max-width:640px){.header-inner{flex-direction:column;align-items:flex-start;gap:.75rem}.lang-switch{width:100%;justify-content:flex-start}.container{padding:.75rem}}
+/* Font stacks */
+/* Minimal CSS reset */
+:where(html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td) {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.4;
+  color: #1f2937;
+  background: #f7f7fb;
+  margin: 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.main-content {
+  padding: 2rem 1rem;
+}
+
+.lead {
+  font-size: 1.125rem;
+  margin: 0 0 1rem;
+}
+
+.cta {
+  margin-top: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  background: #0b75ff;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Oswald", "Nunito Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 500;
+  margin: 0 0 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0.75rem;
+  }
+}
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.lang-switch {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.lang-switch button {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.lang-switch .github {
+  margin-left: 0.6rem;
+  color: #1f2937;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .lang-switch {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+.site-footer {
+  padding: 1rem 0;
+  background: #eaeaea;
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+}

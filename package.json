@@ -7,9 +7,11 @@
     "url": "git@github.com:langer-nice/davidlang.git"
   },
   "scripts": {
-    "build:sass": "sass scss:css --no-source-map"
+    "build:sass": "sass scss:css --no-source-map",
+    "sass": "sass scss:css --no-source-map",
+    "sass:dev": "sass --watch scss:css"
   },
   "devDependencies": {
-    "sass": "^1.80.0"
+    "sass": "^1.97.3"
   }
 }

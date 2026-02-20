@@ -1,11 +1,29 @@
-*{box-sizing:border-box}
-body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.4;color:$text;background:$bg;margin:0}
+@use 'variables' as *;
+/* Minimal CSS reset */
+:where(html,body,div,span,applet,object,iframe,
+  h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+  a,abbr,acronym,address,big,cite,code,
+  del,dfn,em,img,ins,kbd,q,s,samp,
+  small,strike,strong,sub,sup,tt,var,
+  b,u,i,center,dl,dt,dd,ol,ul,li,
+  fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td) {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+*, *:before, *:after {box-sizing: border-box;}
+body{font-family: $font-body; line-height:1.4;color:$text;background:$bg;margin:0}
 .container{max-width:1100px;margin:0 auto;padding:1rem}
 
 .main-content{padding:2rem 1rem}
 .lead{font-size:1.125rem;margin:0 0 1rem}
 .cta{margin-top:1.5rem}
 .btn{display:inline-block;padding:.6rem 1rem;background:$accent;color:#fff;border-radius:6px;text-decoration:none}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6{font-family: $font-heading; font-weight:500; margin:0 0 .5rem}
 
 @media (max-width:640px){
   .container{padding:.75rem}
