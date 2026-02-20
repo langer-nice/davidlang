@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>One-page Site — EN/FR</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="description" content="Responsive one-page site with English/French switch">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 data-i18n="title">Welcome</h1>
+      <nav class="lang-switch">
+        <button id="btn-en" aria-pressed="true">EN</button>
+        <button id="btn-fr" aria-pressed="false">FR</button>
+        <a class="github" href="https://github.com/langer-nice/davidlang" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <p class="lead" data-i18n="intro">This is a responsive one-page site.</p>
+    <section class="cta">
+      <a href="#" class="btn" data-i18n="learn">Learn more</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small data-i18n="copyright">© 2026 Your Name</small>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
