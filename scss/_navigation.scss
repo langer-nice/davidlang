@@ -1,12 +1,88 @@
 @use 'variables' as *;
 
-.site-header{background:#fff;border-bottom:1px solid rgba(0,0,0,.06)}
-.header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem}
-.lang-switch{display:flex;gap:.5rem;align-items:center}
-.lang-switch button{background:transparent;border:1px solid rgba(0,0,0,.08);padding:.4rem .6rem;border-radius:4px;cursor:pointer}
-.lang-switch .github{margin-left:.6rem;color:$text;text-decoration:none;font-size:.9rem}
-
-@media (max-width:640px){
-  .header-inner{flex-direction:column;align-items:flex-start;gap:.75rem}
-  .lang-switch{width:100%;justify-content:flex-start}
+/* ========== Header ========== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in srgb, $bg 92%, white 8%);
+  border-bottom: 1px solid $line;
+  backdrop-filter: blur(10px);
 }
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+
+.brand {
+  flex-shrink: 0;
+}
+
+.brand-name {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba($ink, 0.70);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex: 1;
+  justify-content: center;
+
+  a {
+    color: $ink;
+    text-decoration: none;
+    font-size: 13px;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.nav-cta {
+  padding: 10px 12px;
+  border: 1px solid $line;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.lang-switch {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-shrink: 0;
+
+  select {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid $line;
+    border-radius: 4px;
+    background: white;
+    color: $ink;
+    font-size: 13px;
+    font-family: $font-body;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 640px) {
+  .header-inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .lang-switch {
+    width: auto;
+    justify-content: flex-end;
+  }
+}
+

@@ -1,4 +1,88 @@
 @use 'variables' as *;
+
+/* ========== Base & Reset ========== */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: $bg;
+  color: $ink;
+  font-family: $font-body;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: min($container-max, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.skip {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+
+  &:focus {
+    left: 16px;
+    top: 16px;
+    width: auto;
+    height: auto;
+    padding: 10px 12px;
+    background: #fff;
+    border: 1px solid $line;
+    border-radius: 10px;
+    z-index: 9999;
+  }
+}
+
+/* ========== Buttons ========== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+}
+
+.btn-primary {
+  background: $navy;
+  color: $navy-ink;
+  box-shadow: $shadow;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: $navy;
+  border-color: rgba($navy, 0.40);
+
+  &:hover {
+    border-color: $navy;
+  }
+}
+
 /* Minimal CSS reset */
 :where(html,body,div,span,applet,object,iframe,
   h1,h2,h3,h4,h5,h6,p,blockquote,pre,
@@ -13,18 +97,75 @@
   vertical-align: baseline;
 }
 
-*, *:before, *:after {box-sizing: border-box;}
-body{font-family: $font-body; line-height:1.4;color:$text;background:$bg;margin:0}
-.container{max-width:1100px;margin:0 auto;padding:1rem}
-
-.main-content{padding:2rem 1rem}
-.lead{font-size:1.125rem;margin:0 0 1rem}
-.cta{margin-top:1.5rem}
-.btn{display:inline-block;padding:.6rem 1rem;background:$accent;color:#fff;border-radius:6px;text-decoration:none}
-
 /* Headings */
-h1,h2,h3,h4,h5,h6{font-family: $font-heading; font-weight:500; margin:0 0 .5rem}
-
-@media (max-width:640px){
-  .container{padding:.75rem}
+h1,h2,h3,h4,h5,h6 {
+  font-family: $font-heading;
+  font-weight: 500;
+  margin: 0 0 0.5rem;
 }
+
+/* Color palette preview */
+.color-palette {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.swatch {
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.swatch-color {
+  width: 120px;
+  height: 80px;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.swatch-meta {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: $ink;
+
+  .name {
+    font-weight: 600;
+  }
+
+  .hex {
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: $warm-grey;
+  }
+}
+
+.swatch-color.midnight {
+  background: $midnight-navy;
+}
+
+.swatch-color.soft {
+  background: $soft-off-white;
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+.swatch-color.warm {
+  background: $warm-grey;
+}
+
+.swatch-color.deep {
+  background: $deep-slate;
+}
+
+.swatch-color.champagne {
+  background: $champagne;
+}
+
+.swatch-color.emerald {
+  background: $emerald-teal;
+}
+

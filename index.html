@@ -3,37 +3,277 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>One-page Site — EN/FR</title>
+  <title>David Lang — Senior UX/UI & Front-End Designer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <meta name="description" content="Responsive one-page site with English/French switch">
+  <meta name="description" content="Senior UX/UI & Front-End Designer specializing in luxury travel, complex digital systems, and responsive design.">
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
+
   <header class="site-header">
     <div class="container header-inner">
-      <h1 data-i18n="title">Welcome</h1>
+      <div class="brand">
+        <span class="brand-name">David Lang</span>
+      </div>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+        <a class="nav-cta" href="#contact">Contact</a>
+      </nav>
+
       <nav class="lang-switch">
-        <button id="btn-en" aria-pressed="true">EN</button>
-        <button id="btn-fr" aria-pressed="false">FR</button>
-        <a class="github" href="https://github.com/langer-nice/davidlang" target="_blank" rel="noopener">GitHub</a>
+        <select id="lang-select" aria-label="Language switch">
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+        </select>
       </nav>
     </div>
   </header>
 
-  <main class="container main-content">
-    <p class="lead" data-i18n="intro">This is a responsive one-page site.</p>
-    <section class="cta">
-      <a href="#" class="btn" data-i18n="learn">Learn more</a>
+  <main id="main">
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="kicker" data-i18n="kicker">DAVID LANG</p>
+          <h1 data-i18n="hero_title">Senior UX/UI &<br/>Front-End Designer</h1>
+
+          <p class="lead" data-i18n="hero_lead">
+            Designing complex digital systems for luxury travel and digital platforms.
+          </p>
+
+          <p class="sublead" data-i18n="hero_sublead">
+            Based in Nice &amp; Monaco — Available for selective freelance collaborations.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#experience" data-i18n="view_work">View Work</a>
+            <a class="btn btn-ghost" href="#contact" data-i18n="lets_talk">Let's Talk</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT I DO -->
+    <section id="services" class="section">
+      <div class="container">
+        <header class="section-head">
+          <h2 data-i18n="services">What I Do</h2>
+        </header>
+
+        <div class="cards grid-3">
+          <article class="card">
+            <h3 data-i18n="service_1">UX Strategy &amp; Complex Systems</h3>
+            <p data-i18n="service_1_desc">User flows, booking journeys, operational platforms.</p>
+          </article>
+
+          <article class="card">
+            <h3 data-i18n="service_2">UI Design &amp; Design Systems</h3>
+            <p data-i18n="service_2_desc">High-fidelity mockups, component libraries, visual coherence.</p>
+          </article>
+
+          <article class="card">
+            <h3 data-i18n="service_3">Front-End Implementation</h3>
+            <p data-i18n="service_3_desc">HTML, CSS, SCSS, responsive systems, design/dev collaboration.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- INDUSTRY EXPERIENCE (dark band) -->
+    <section id="expertise" class="section section-dark">
+      <div class="container">
+        <header class="section-head">
+          <h2 data-i18n="expertise">Industry Experience</h2>
+        </header>
+
+        <ul class="two-col-list">
+          <li>
+            <span class="item-title" data-i18n="exp_1">Luxury Travel &amp; Cruise Industry</span>
+            <span class="item-meta" data-i18n="exp_1_years">12+ years</span>
+          </li>
+          <li>
+            <span class="item-title" data-i18n="exp_2">Airline &amp; GDS Reservation Systems</span>
+            <span class="item-meta" data-i18n="exp_2_years">10+ years</span>
+          </li>
+          <li>
+            <span class="item-title" data-i18n="exp_3">Luxury Real Estate Digital Platforms</span>
+            <span class="item-meta" data-i18n="exp_3_years">2+ years</span>
+          </li>
+          <li>
+            <span class="item-title" data-i18n="exp_4">Internal Corporate Platforms / Intranet Systems</span>
+            <span class="item-meta" data-i18n="exp_4_years">10+ years</span>
+          </li>
+          <li>
+            <span class="item-title" data-i18n="exp_5">Booking &amp; Transactional User Flows</span>
+            <span class="item-meta" data-i18n="exp_5_years">15+ years</span>
+          </li>
+          <li>
+            <span class="item-title" data-i18n="exp_6">Digital Product UX / UI</span>
+            <span class="item-meta" data-i18n="exp_6_years">15+ years</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SELECTED EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container">
+        <header class="section-head">
+          <h2 data-i18n="experience">Selected Experience</h2>
+        </header>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="role-top">
+                <h3 data-i18n="silversea">Silversea Cruises</h3>
+                <span class="role-dates" data-i18n="silversea_dates">2013 — 2023</span>
+              </div>
+              <p class="role-title" data-i18n="silversea_role">Senior UX/UI &amp; Front-End Designer</p>
+              <p class="role-desc" data-i18n="silversea_desc">
+                Led design and front-end development for complex reservation systems, internal
+                operational tools, and comprehensive design systems. Collaborated with cross-functional
+                teams to deliver scalable digital solutions for luxury cruise operations.
+              </p>
+              <div class="tags">
+                <span class="tag">Reservation systems</span>
+                <span class="tag">Intranet platforms</span>
+                <span class="tag">Operational tools</span>
+                <span class="tag">Design systems</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="role-top">
+                <h3 data-i18n="freelance">Freelance</h3>
+                <span class="role-dates" data-i18n="freelance_dates">2023 — Present</span>
+              </div>
+              <p class="role-title" data-i18n="freelance_role">UX/UI &amp; Front-End Designer</p>
+              <p class="role-desc" data-i18n="freelance_desc">
+                Selective collaborations with premium brands and businesses in Nice and Monaco.
+              </p>
+              <div class="tags">
+                <span class="tag">Crystal Cruises / A&amp;K</span>
+                <span class="tag">John Taylor</span>
+                <span class="tag">Monaco Business Address</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTIVE DIGITAL PROJECTS (dark band) -->
+    <section class="section section-dark">
+      <div class="container">
+        <header class="section-head">
+          <h2 data-i18n="projects">Selective Digital Projects</h2>
+          <p class="section-intro" data-i18n="projects_intro">
+            I collaborate with selected businesses in Nice and Monaco for high-quality website design and UX optimization.
+          </p>
+        </header>
+
+        <div class="cards grid-3">
+          <article class="card card-dark">
+            <h3 data-i18n="project_1">Website UX Audit</h3>
+            <p data-i18n="project_1_desc">Comprehensive analysis of your digital experience with actionable insights and strategic recommendations.</p>
+          </article>
+
+          <article class="card card-dark">
+            <h3 data-i18n="project_2">Premium One-Page Website</h3>
+            <p data-i18n="project_2_desc">Elegant, high-performance single-page websites designed to showcase your brand with luxury minimalism.</p>
+          </article>
+
+          <article class="card card-dark">
+            <h3 data-i18n="project_3">Interface Redesign &amp; Optimization</h3>
+            <p data-i18n="project_3_desc">Transform existing interfaces with refined design systems and improved user experiences.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <header class="section-head">
+          <h2 data-i18n="about">About</h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-copy">
+            <p data-i18n="about_p1">
+              With 25+ years of experience designing and building digital products, I specialize in complex systems
+              that demand both strategic thinking and meticulous execution.
+            </p>
+            <p data-i18n="about_p2">
+              My work focuses on the intersection of luxury, functionality, and technical precision. From multi-step
+              booking journeys to operational platforms used by thousands, I create experiences that are both elegant
+              and efficient.
+            </p>
+            <p data-i18n="about_p3">
+              I excel in cross-functional collaboration—bridging design, development, and business strategy. My bilingual
+              fluency (French/English) and deep understanding of European luxury markets make me a strategic partner
+              for premium brands.
+            </p>
+          </div>
+
+          <dl class="stats" aria-label="Key figures">
+            <div class="stat">
+              <dt>25+</dt>
+              <dd data-i18n="years_exp">Years Experience</dd>
+            </div>
+            <div class="stat">
+              <dt>12+</dt>
+              <dd data-i18n="luxury_travel">Luxury Travel</dd>
+            </div>
+            <div class="stat">
+              <dt>2</dt>
+              <dd data-i18n="languages">Languages</dd>
+            </div>
+            <div class="stat">
+              <dt>100%</dt>
+              <dd data-i18n="dedication">Dedication</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / FOOTER BAND (dark) -->
+    <section id="contact" class="section section-dark section-contact">
+      <div class="container contact-grid">
+        <div>
+          <h2 class="contact-title" data-i18n="contact">Let's create something<br/>exceptional together</h2>
+          <p class="contact-lead" data-i18n="contact_lead">
+            Available for selective collaborations with premium brands and businesses in Nice, Monaco, and beyond.
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <p class="contact-line"><strong data-i18n="contact_email">Email</strong><br/>contact@designer.com</p>
+          <p class="contact-line"><strong data-i18n="contact_location">Location</strong><br/>Nice &amp; Monaco, French Riviera</p>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p class="copyright" data-i18n="copyright">
+          © 2026 Senior UX/UI &amp; Front-End Designer. All rights reserved.
+        </p>
+      </div>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <small data-i18n="copyright">© 2026 Your Name</small>
-    </div>
-  </footer>
 
   <script src="js/main.js"></script>
 </body>
