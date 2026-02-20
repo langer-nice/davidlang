@@ -1,0 +1,10 @@
+.site-header{background:#fff;border-bottom:1px solid rgba(0,0,0,.06)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem}
+.lang-switch{display:flex;gap:.5rem;align-items:center}
+.lang-switch button{background:transparent;border:1px solid rgba(0,0,0,.08);padding:.4rem .6rem;border-radius:4px;cursor:pointer}
+.lang-switch .github{margin-left:.6rem;color:$text;text-decoration:none;font-size:.9rem}
+
+@media (max-width:640px){
+  .header-inner{flex-direction:column;align-items:flex-start;gap:.75rem}
+  .lang-switch{width:100%;justify-content:flex-start}
+}
