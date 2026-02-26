@@ -1,4 +1,45 @@
 @use 'variables' as *;
+/* ========== Industry Experience Grid ========== */
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.industry-item {
+  background: none;
+  padding: 0;
+  text-align: left;
+}
+
+.industry-item .item-title {
+  display: block;
+  font-size: 1.1rem;
+  font-family: $font-serif;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: inherit;
+}
+
+.industry-item .item-meta {
+  display: block;
+  font-size: 1rem;
+  color: $champagne;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .industry-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .industry-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* ========== Sections ========== */
 .section {
@@ -105,35 +146,49 @@
 
 /* ========== Timeline ========== */
 .timeline {
-  margin-top: 22px;
-  display: grid;
-  gap: 18px;
-}
-
-.timeline-item {
   position: relative;
-  display: grid;
-  grid-template-columns: 18px 1fr;
-  gap: 14px;
-}
+  padding-left: 40px; // adjust if needed for marker alignment
 
-.timeline-marker {
-  width: 10px;
-  height: 10px;
-  margin-top: 10px;
-  border-radius: 999px;
-  background: rgba($navy, 0.7);
-  mix-blend-mode: darken;
-  border: 2px solid rgba(15, 30, 37, 0.25);
-}
+  .timeline-vertical-line {
+    position: absolute;
+    left: 63px; // aligns with marker center, adjust as needed
+    top: 0px; // start below first marker
+    width: 1px;
+    height: calc(100% - 64px); // spans between markers
+    background: #000;
+    z-index: 0;
+    content: "";
+    display: block;
+  }
 
-.timeline-content {
-  background: $bg-2;
-  border: 1px solid $line;
-  border-radius: $radius;
-  padding: 18px;
-}
+  .timeline-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
 
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .timeline-marker {
+    position: absolute;
+    left: 16px; // aligns with vertical line
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #000;
+    z-index: 1;
+    top: 0;
+  }
+
+  .timeline-content {
+    margin-left: 40px;
+    z-index: 2;
+  }
+}
 .role-top {
   display: flex;
   align-items: baseline;

@@ -2,7 +2,7 @@ const translations = {
   en: {
     title: 'David Lang — Senior UX/UI & Front-End Designer',
     kicker: 'DAVID LANG',
-    hero_title: 'Senior UX/UI &<br/>Front-End Designer',
+    hero_title: 'Senior UX/UI & Front-End Designer',
     hero_lead: 'Designing complex digital systems for luxury travel and digital platforms.',
     hero_sublead: 'Based in Nice & Monaco — Available for selective freelance collaborations.',
     view_work: 'View Work',
@@ -60,7 +60,7 @@ const translations = {
     languages: 'Languages',
     dedication: 'Dedication',
     
-    contact: 'Let\'s create something<br/>exceptional together',
+    contact: 'Let\'s create something exceptional together',
     contact_lead: 'Available for selective collaborations with premium brands and businesses in Nice, Monaco, and beyond.',
     contact_email: 'Email',
     contact_location: 'Location',
@@ -70,7 +70,7 @@ const translations = {
   fr: {
     title: 'David Lang — Directeur Senior UX/UI & Designer Front-End',
     kicker: 'DAVID LANG',
-    hero_title: 'Directeur Senior UX/UI &<br/>Designer Front-End',
+    hero_title: 'Directeur Senior UX/UI & Designer Front-End',
     hero_lead: 'Conception de systèmes numériques complexes pour le luxe et les voyages.',
     hero_sublead: 'Basé à Nice & Monaco — Disponible pour des collaborations sélectives en freelance.',
     view_work: 'Voir les projets',
@@ -128,7 +128,7 @@ const translations = {
     languages: 'Langues',
     dedication: 'Dévouement',
     
-    contact: 'Créons quelque chose<br/>d\'exceptionnel ensemble',
+    contact: 'Créons quelque chose d\'exceptionnel ensemble',
     contact_lead: 'Disponible pour des collaborations sélectives avec des marques premium et entreprises à Nice, Monaco et au-delà.',
     contact_email: 'Email',
     contact_location: 'Localisation',
@@ -155,4 +155,21 @@ document.addEventListener('DOMContentLoaded', ()=>{
   if(sel){
     sel.addEventListener('change', ()=>applyLang(sel.value));
   }
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href').slice(1);
+        const target = document.getElementById(targetId);
+        if(target) {
+          e.preventDefault();
+          // Get header height
+          const header = document.querySelector('.site-header');
+          const headerHeight = header ? header.offsetHeight : 0;
+          const targetRect = target.getBoundingClientRect();
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          const offset = targetRect.top + scrollTop - headerHeight - 8; // 8px extra spacing
+          window.scrollTo({ top: offset, behavior: 'smooth' });
+        }
+      });
+  });
 });
