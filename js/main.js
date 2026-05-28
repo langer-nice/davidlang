@@ -40,6 +40,11 @@ const translations = {
     freelance_dates: '2023 — Present',
     freelance_role: 'UX/UI & Front-End Designer',
     freelance_desc: 'Selective collaborations with premium brands and businesses in Nice and Monaco.',
+
+    amadeus: 'Amadeus / Travel Technology',
+    amadeus_meta: 'Enterprise Travel Ecosystem',
+    amadeus_role: 'UX/UI Specialist',
+    amadeus_desc: 'Contributed to enterprise travel platforms spanning complex booking journeys, operational workflows, and scalable UI systems in close collaboration with product and development teams.',
     
     projects: 'Selective Digital Projects',
     projects_intro: 'I collaborate with selected businesses in Nice and Monaco for high-quality website design and UX optimization.',
@@ -108,6 +113,11 @@ const translations = {
     freelance_dates: '2023 — Présent',
     freelance_role: 'Designer UX/UI & Front-End',
     freelance_desc: 'Collaborations sélectives avec les marques premium et entreprises à Nice et Monaco.',
+
+    amadeus: 'Amadeus / Travel Technology',
+    amadeus_meta: 'Écosystème Voyage Entreprise',
+    amadeus_role: 'Spécialiste UX/UI',
+    amadeus_desc: 'Contribution à des plateformes voyage enterprise couvrant des parcours de réservation complexes, des workflows opérationnels et des systèmes UI scalables, en étroite collaboration avec les équipes produit et développement.',
     
     projects: 'Projets Numériques Sélectionnés',
     projects_intro: 'Je collabore avec des entreprises sélectionnées à Nice et Monaco pour le design web de haute qualité et l\'optimisation UX.',

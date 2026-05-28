@@ -43,7 +43,21 @@
 
 /* ========== Sections ========== */
 .section {
-  padding: 56px 0;
+  min-height: clamp(42rem, 84vh, 56rem);
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.section > .container:first-child {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#services.section {
+  padding-top: 1.5rem;
 }
 
 .section-head {
