@@ -120,18 +120,18 @@
   color: $navy-ink;
 
   .section-intro {
-    color: rgba($navy-ink, 0.72);
+    color: $navy-ink-muted;
   }
 
   .card {
-    background: rgba(255, 255, 255, 0.06);
+    background: $surface-overlay;
     border: 1px solid $line-dark;
   }
 }
 
 .card-dark {
   p {
-    color: rgba($navy-ink, 0.78);
+    color: $navy-ink-soft;
   }
 }
 
@@ -175,7 +175,7 @@
     top: 0px; // start below first marker
     width: 1px;
     height: calc(100% - 64px); // spans between markers
-    background: #000;
+    background: $timeline-line;
     z-index: 0;
     content: "";
     display: block;
@@ -198,8 +198,8 @@
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background: #fff;
-    border: 2px solid #000;
+    background: $timeline-marker-bg;
+    border: 2px solid $timeline-marker-border;
     z-index: 1;
     top: 0;
   }
@@ -249,7 +249,7 @@
   padding: 8px 10px;
   border-radius: 999px;
   border: 1px solid $line;
-  background: rgba($bg, 0.80);
+  background: $surface-on-bg;
 }
 
 /* ========== About ========== */
@@ -264,7 +264,7 @@
 .about-copy {
   p {
     margin: 0 0 12px;
-    color: rgba($ink, 0.86);
+    color: $ink-soft;
     max-width: 75ch;
   }
 }
@@ -318,7 +318,7 @@
 
 .contact-lead {
   margin: 0;
-  color: rgba($navy-ink, 0.78);
+  color: $navy-ink-soft;
   max-width: 70ch;
 }
 
@@ -326,12 +326,12 @@
   border: 1px solid $line-dark;
   border-radius: $radius;
   padding: 18px;
-  background: rgba(255, 255, 255, 0.06);
+  background: $surface-overlay;
 }
 
 .contact-line {
   margin: 0 0 12px;
-  color: rgba($navy-ink, 0.84);
+  color: $navy-ink-copy;
 
   strong {
     color: $navy-ink;
@@ -347,5 +347,5 @@
 .copyright {
   margin: 0;
   font-size: 12px;
-  color: rgba($navy-ink, 0.70);
+  color: $navy-ink-subtle;
 }

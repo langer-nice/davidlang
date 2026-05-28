@@ -5,7 +5,7 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  background: color-mix(in srgb, $bg 92%, white 8%);
+  background: $site-header-overlay;
   border-bottom: 1px solid $line;
   backdrop-filter: blur(10px);
 }
@@ -26,7 +26,7 @@
   font-size: 12px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba($ink, 0.70);
+  color: $ink-subtle;
 }
 
 .nav {
@@ -80,7 +80,7 @@
   height: 44px;
   padding: 0;
   border: 1px solid $line;
-  background: rgba(255, 255, 255, 0.72);
+  background: $surface-glass;
   color: $ink;
   cursor: pointer;
   appearance: none;
@@ -92,7 +92,7 @@
 
   &:focus-visible {
     transform: translateY(-1px);
-    outline: 2px solid rgba($navy, 0.22);
+    outline: 2px solid $navy-focus-ring;
     outline-offset: 2px;
   }
 }
@@ -191,7 +191,7 @@
     justify-content: center;
     gap: 1.25rem;
     padding: 2rem;
-    background: color-mix(in srgb, $bg 94%, white 6%);
+    background: $mobile-nav-overlay;
     backdrop-filter: blur(10px);
     z-index: 1;
     overflow-y: auto;

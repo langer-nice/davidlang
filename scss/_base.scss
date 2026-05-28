@@ -41,7 +41,7 @@ img {
     width: auto;
     height: auto;
     padding: 10px 12px;
-    background: #fff;
+    background: $white;
     border: 1px solid $line;
     border-radius: 10px;
     z-index: 9999;
@@ -59,7 +59,7 @@ img {
   text-decoration: none;
   font-weight: 600;
   letter-spacing: 0.01em;
-  border: 1px solid transparent;
+  border: 1px solid $transparent;
   transition: all 0.2s ease;
 
   &:hover {
@@ -74,9 +74,9 @@ img {
 }
 
 .btn-ghost {
-  background: transparent;
+  background: $transparent;
   color: $navy;
-  border-color: rgba($navy, 0.40);
+  border-color: $navy-border-soft;
 
   &:hover {
     border-color: $navy;
@@ -94,7 +94,7 @@ img {
   justify-content: center;
   padding: 0;
   border: 1px solid $line;
-  background: rgba(255, 255, 255, 0.72);
+  background: $surface-glass;
   color: $ink;
   cursor: pointer;
   opacity: 0;
@@ -121,7 +121,7 @@ img {
   &:hover,
   &:focus-visible {
     transform: translateY(-1px);
-    outline: 2px solid rgba($navy, 0.22);
+    outline: 2px solid $navy-focus-ring;
     outline-offset: 2px;
   }
 }
@@ -173,8 +173,8 @@ h1,h2,h3,h4,h5,h6 {
   width: 120px;
   height: 80px;
   border-radius: 8px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(0, 0, 0, 0);
+  box-shadow: $shadow-soft;
+  border: 1px solid $transparent;
 }
 
 .swatch-meta {
@@ -200,7 +200,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .swatch-color.soft {
   background: $soft-off-white;
-  border-color: rgba(0, 0, 0, 0.06);
+  border-color: $border-soft;
 }
 
 .swatch-color.warm {

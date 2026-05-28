@@ -71,7 +71,7 @@ img {
   text-decoration: none;
   font-weight: 600;
   letter-spacing: 0.01em;
-  border: 1px solid transparent;
+  border: 1px solid rgba(0, 0, 0, 0);
   transition: all 0.2s ease;
 }
 .btn:hover {
@@ -85,7 +85,7 @@ img {
 }
 
 .btn-ghost {
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   color: #0f1e25;
   border-color: rgba(15, 30, 37, 0.4);
 }
@@ -228,7 +228,7 @@ h1, h2, h3, h4, h5, h6 {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: color-mix(in srgb, #f5f2ec 92%, white 8%);
+  background: color-mix(in srgb, #f5f2ec 92%, #fff 8%);
   border-bottom: 1px solid rgba(17, 20, 24, 0.12);
   backdrop-filter: blur(10px);
 }
@@ -409,7 +409,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     gap: 1.25rem;
     padding: 2rem;
-    background: color-mix(in srgb, #f5f2ec 94%, white 6%);
+    background: color-mix(in srgb, #f5f2ec 94%, #fff 6%);
     backdrop-filter: blur(10px);
     z-index: 1;
     overflow-y: auto;
@@ -538,7 +538,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: none;
 }
 .hero-actions .btn-ghost {
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   color: rgba(15, 30, 37, 0.96);
   border-color: rgba(15, 30, 37, 0.88);
 }
@@ -942,5 +942,3 @@ h1, h2, h3, h4, h5, h6 {
   background: #eaeaea;
   border-top: 1px solid rgba(0, 0, 0, 0.04);
 }
-
-/*# sourceMappingURL=styles.css.map */

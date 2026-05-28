@@ -10,7 +10,7 @@
     font-size: 12px;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: rgba($ink, 0.55);
+    color: $ink-faint;
   }
 
   h1 {
@@ -29,7 +29,7 @@
       width: clamp(120px, 16vw, 210px);
       height: 2px;
       margin-top: 1.6rem;
-      background: rgba($navy, 0.9);
+      background: $navy-accent-line;
     }
   }
 }
@@ -64,7 +64,7 @@
   line-height: 1.32;
   margin: 2.2rem 0 0;
   // max-width: 42ch;
-  color: rgba($ink, 0.88);
+  color: $ink-strong;
 }
 
 .sublead {
@@ -95,9 +95,9 @@
   }
 
   .btn-ghost {
-    background: transparent;
-    color: rgba($navy, 0.96);
-    border-color: rgba($navy, 0.88);
+    background: $transparent;
+    color: $navy-text-strong;
+    border-color: $navy-border-strong;
   }
 }
 
