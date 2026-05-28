@@ -7,6 +7,12 @@ const translations = {
     hero_sublead: 'Based in Nice & Monaco — Available for selective freelance collaborations.',
     view_work: 'View Work',
     lets_talk: 'Let\'s Talk',
+    nav_home: 'Home',
+    nav_services: 'Services',
+    nav_expertise: 'Expertise',
+    nav_experience: 'Experience',
+    nav_about: 'About',
+    nav_contact: 'Contact',
     
     services: 'What I Do',
     service_1: 'UX Strategy & Complex Systems',
@@ -80,6 +86,12 @@ const translations = {
     hero_sublead: 'Basé à Nice & Monaco — Disponible pour des collaborations sélectives en freelance.',
     view_work: 'Voir les projets',
     lets_talk: 'Parlons-en',
+    nav_home: 'Accueil',
+    nav_services: 'Services',
+    nav_expertise: 'Expertise',
+    nav_experience: 'Expérience',
+    nav_about: 'À propos',
+    nav_contact: 'Contact',
     
     services: 'Ce que je fais',
     service_1: 'Stratégie UX & Systèmes Complexes',
@@ -153,7 +165,7 @@ function syncLangToggle(lang) {
   if (!flag || !toggle) return;
 
   const isFrench = lang === 'fr';
-  flag.src = isFrench ? 'img/flag-fr.svg' : 'img/flag-gb.svg';
+  flag.src = isFrench ? 'img/icon_map-fr.svg' : 'img/icon_map-gb.svg';
   flag.alt = isFrench ? 'French' : 'English';
   toggle.setAttribute('aria-label', isFrench ? 'Switch language to English' : 'Passer en francais');
 }

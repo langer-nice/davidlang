@@ -265,13 +265,14 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .lang-flag {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .lang-switch select {
