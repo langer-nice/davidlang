@@ -76,3 +76,106 @@ Do NOT refactor yet.
 Do NOT install packages yet.
 
 First focus only on understanding and documenting the existing project.
+
+
+<!-- -----------------  -->
+
+1. Work locally
+
+Dans VSCode :
+
+git checkout dev
+
+Faire :
+
+design changes
+responsive fixes
+JS/CSS updates
+2. Save + Commit
+git add .
+git commit -m "Fix mobile navigation"
+3. Push vers branche test
+git push origin dev
+4. Vercel crée automatiquement un Preview
+
+Vercel génère :
+
+preview URL
+
+Exemple :
+
+davidlangdesign-git-dev.vercel.app
+5. Tester
+
+Toujours vérifier :
+
+Desktop
+grand écran
+medium
+small desktop
+Mobile
+iPhone Safari
+Chrome mobile
+menu
+scroll
+overlays
+FR / EN
+Important
+
+Tester :
+
+navigation
+responsive
+scroll locking
+animations
+buttons
+typography wrap
+6. Si problème
+
+Retour :
+
+git commit
+git push
+
+→ nouveau preview automatiquement.
+
+7. Quand tout est validé
+
+Merge vers production :
+
+git checkout main
+git merge dev
+git push origin main
+8. Production Deploy
+
+Vercel :
+
+déploie automatiquement
+OU
+tu fais “Promote to Production”
+9. Vérification finale live
+
+Tester :
+
+davidlangdesign.com
+
+Vérifier :
+
+mobile
+desktop
+SSL
+navigation
+performance
+Recommended Branch Structure
+Production
+main
+Development
+dev
+Experimental fixes
+feature/mobile-menu-fix
+Important Rule
+Never test directly on main
+
+Toujours :
+
+dev → preview → validate → main

@@ -2,7 +2,7 @@ const translations = {
   en: {
     title: 'David Lang — Senior UX/UI & Front-End Designer',
     kicker: 'DAVID LANG',
-    hero_title: 'Senior UX/UI & Front-End Designer',
+    hero_title: '<span class="hero-title-layout hero-title-layout-desktop"><span class="hero-title-line">Senior UX/UI &amp;</span><span class="hero-title-line">Front-End Designer</span></span><span class="hero-title-layout hero-title-layout-compact"><span class="hero-title-line">Senior UX/UI &amp;</span><span class="hero-title-line">Front-End Designer</span></span>',
     hero_lead: 'Designing complex digital systems for luxury travel and digital platforms.',
     hero_sublead: 'Based in Nice & Monaco — Available for selective freelance collaborations.',
     view_work: 'View Work',
@@ -80,9 +80,9 @@ const translations = {
     copyright: '© 2026 Senior UX/UI & Front-End Designer. All rights reserved.'
   },
   fr: {
-    title: 'David Lang — Directeur Senior UX/UI & Designer Front-End',
+    title: 'David Lang — Senior UX/UI & Front-End Designer',
     kicker: 'DAVID LANG',
-    hero_title: 'Directeur Senior UX/UI & Designer Front-End',
+    hero_title: '<span class="hero-title-layout hero-title-layout-desktop"><span class="hero-title-line">Senior UX/UI &amp;</span><span class="hero-title-line">Front-End Designer</span></span><span class="hero-title-layout hero-title-layout-compact"><span class="hero-title-line">Senior UX/UI &amp;</span><span class="hero-title-line">Front-End Designer</span></span>',
     hero_lead: 'Conception de systèmes numériques complexes pour le luxe et les voyages.',
     hero_sublead: 'Basé à Nice & Monaco — Disponible pour des collaborations sélectives en freelance.',
     view_work: 'Voir les projets',
@@ -176,7 +176,13 @@ function applyLang(lang){
   document.documentElement.lang = lang;
   document.querySelectorAll('[data-i18n]').forEach(el=>{
     const key = el.getAttribute('data-i18n');
-    if(translations[lang] && translations[lang][key]) el.textContent = translations[lang][key];
+    if(translations[lang] && translations[lang][key]) {
+      if (el.hasAttribute('data-i18n-html')) {
+        el.innerHTML = translations[lang][key];
+      } else {
+        el.textContent = translations[lang][key];
+      }
+    }
   });
   localStorage.setItem('site-lang', lang);
   const sel = document.getElementById('lang-select');
