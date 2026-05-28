@@ -318,10 +318,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 900px) {
+  html.menu-open,
   body.menu-open {
     overflow: hidden;
-    position: fixed;
-    width: 100%;
     height: 100vh;
     height: 100svh;
     height: 100dvh;
