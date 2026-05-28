@@ -189,9 +189,24 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const siteHeader = document.querySelector('.site-header');
   const menuToggle = document.querySelector('.menu-toggle');
   const nav = document.getElementById('site-nav');
+  let menuScrollY = 0;
 
   function setMenuOpen(isOpen) {
     if (!siteHeader || !menuToggle) return;
+    if (window.innerWidth > 900) isOpen = false;
+
+    if (isOpen && !document.body.classList.contains('menu-open')) {
+      menuScrollY = window.scrollY || window.pageYOffset || 0;
+      document.body.style.top = `-${menuScrollY}px`;
+      document.body.style.width = '100%';
+    }
+
+    if (!isOpen && document.body.classList.contains('menu-open')) {
+      document.body.style.top = '';
+      document.body.style.width = '';
+      window.scrollTo(0, menuScrollY);
+    }
+
     siteHeader.classList.toggle('nav-open', isOpen);
     document.body.classList.toggle('menu-open', isOpen);
     menuToggle.setAttribute('aria-expanded', String(isOpen));
@@ -208,7 +223,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     });
 
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 640) setMenuOpen(false);
+      if (window.innerWidth > 900) setMenuOpen(false);
     });
   }
 

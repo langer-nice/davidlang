@@ -145,7 +145,12 @@
 @media (max-width: 900px) {
   body.menu-open {
     overflow: hidden;
+    position: fixed;
+    width: 100%;
     height: 100vh;
+    height: 100svh;
+    height: 100dvh;
+    overscroll-behavior: none;
   }
 
   .site-header {
@@ -165,8 +170,11 @@
     position: fixed;
     top: var(--mobile-header-height);
     left: 0;
+    right: 0;
     width: 100vw;
     height: calc(100vh - var(--mobile-header-height));
+    height: calc(100svh - var(--mobile-header-height));
+    height: calc(100dvh - var(--mobile-header-height));
     flex-direction: column;
     align-items: center;
     justify-content: center;
