@@ -147,6 +147,17 @@ const translations = {
   }
 };
 
+function syncLangToggle(lang) {
+  const flag = document.getElementById('lang-flag');
+  const toggle = document.getElementById('lang-toggle');
+  if (!flag || !toggle) return;
+
+  const isFrench = lang === 'fr';
+  flag.src = isFrench ? 'img/flag-fr.svg' : 'img/flag-gb.svg';
+  flag.alt = isFrench ? 'French' : 'English';
+  toggle.setAttribute('aria-label', isFrench ? 'Switch language to English' : 'Passer en francais');
+}
+
 function applyLang(lang){
   document.documentElement.lang = lang;
   document.querySelectorAll('[data-i18n]').forEach(el=>{
@@ -156,6 +167,7 @@ function applyLang(lang){
   localStorage.setItem('site-lang', lang);
   const sel = document.getElementById('lang-select');
   if(sel) sel.value = lang;
+  syncLangToggle(lang);
 }
 
 document.addEventListener('DOMContentLoaded', ()=>{
@@ -165,6 +177,41 @@ document.addEventListener('DOMContentLoaded', ()=>{
   if(sel){
     sel.addEventListener('change', ()=>applyLang(sel.value));
   }
+  const langToggle = document.getElementById('lang-toggle');
+  if (langToggle && sel) {
+    langToggle.addEventListener('click', () => {
+      const nextLang = sel.value === 'fr' ? 'en' : 'fr';
+      sel.value = nextLang;
+      applyLang(nextLang);
+    });
+  }
+
+  const siteHeader = document.querySelector('.site-header');
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.getElementById('site-nav');
+
+  function setMenuOpen(isOpen) {
+    if (!siteHeader || !menuToggle) return;
+    siteHeader.classList.toggle('nav-open', isOpen);
+    document.body.classList.toggle('menu-open', isOpen);
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  }
+
+  if (menuToggle && nav) {
+    menuToggle.addEventListener('click', () => {
+      setMenuOpen(!siteHeader.classList.contains('nav-open'));
+    });
+
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => setMenuOpen(false));
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 640) setMenuOpen(false);
+    });
+  }
+
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(link => {
       link.addEventListener('click', function(e) {

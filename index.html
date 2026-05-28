@@ -14,28 +14,58 @@
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <span class="brand-name">David Lang</span>
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="brand-name">David Lang</span>
+        </div>
+
+        <nav id="site-nav" class="nav" aria-label="Main navigation">
+          <div class="nav-list">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#expertise">Expertise</a>
+            <a href="#experience">Experience</a>
+            <a href="#about">About</a>
+            <a class="nav-cta" href="#contact">Contact</a>
+          </div>
+        </nav>
+
+        <div class="header-controls">
+          <button
+            type="button"
+            class="menu-toggle"
+            aria-expanded="false"
+            aria-controls="site-nav"
+            aria-label="Open menu"
+          >
+            <span class="menu-toggle-bar"></span>
+            <span class="menu-toggle-bar"></span>
+            <span class="menu-toggle-bar"></span>
+          </button>
+
+          <div class="lang-switch">
+            <button
+              type="button"
+              id="lang-toggle"
+              class="lang-toggle"
+              aria-label="Switch language"
+            >
+              <img
+                id="lang-flag"
+                class="lang-flag"
+                src="img/flag-gb.svg"
+                alt=""
+                aria-hidden="true"
+              />
+            </button>
+            <select id="lang-select" aria-label="Language switch">
+              <option value="en">EN</option>
+              <option value="fr">FR</option>
+            </select>
+          </div>
+        </div>
       </div>
-
-      <nav class="nav" aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#expertise">Expertise</a>
-        <a href="#experience">Experience</a>
-        <a href="#about">About</a>
-        <a class="nav-cta" href="#contact">Contact</a>
-      </nav>
-
-      <nav class="lang-switch">
-        <select id="lang-select" aria-label="Language switch">
-          <option value="en">EN</option>
-          <option value="fr">FR</option>
-        </select>
-      </nav>
-    </div>
-  </header>
+    </header>
 
   <main id="main">
     <!-- HERO -->
