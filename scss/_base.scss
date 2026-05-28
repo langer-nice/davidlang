@@ -83,6 +83,56 @@ img {
   }
 }
 
+.back-to-top {
+  position: fixed;
+  right: max(24px, env(safe-area-inset-right));
+  bottom: max(24px, env(safe-area-inset-bottom));
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid $line;
+  background: rgba(255, 255, 255, 0.72);
+  color: $ink;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  z-index: 40;
+  backdrop-filter: blur(10px);
+  appearance: none;
+
+  span {
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-1px);
+    outline: 2px solid rgba($navy, 0.22);
+    outline-offset: 2px;
+  }
+}
+
+body.menu-open .back-to-top,
+html.menu-open .back-to-top {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 /* Minimal CSS reset */
 :where(html,body,div,span,applet,object,iframe,
   h1,h2,h3,h4,h5,h6,p,blockquote,pre,

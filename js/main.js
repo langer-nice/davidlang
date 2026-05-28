@@ -74,6 +74,7 @@ const translations = {
     contact: 'Let\'s create something exceptional together',
     contact_lead: 'Available for selective collaborations with premium brands and businesses in Nice, Monaco, and beyond.',
     contact_email: 'Email',
+    contact_phone: 'Telephone',
     contact_location: 'Location',
     contact_location_val: 'Nice & Monaco, French Riviera',
     copyright: '© 2026 Senior UX/UI & Front-End Designer. All rights reserved.'
@@ -153,6 +154,7 @@ const translations = {
     contact: 'Créons quelque chose d\'exceptionnel ensemble',
     contact_lead: 'Disponible pour des collaborations sélectives avec des marques premium et entreprises à Nice, Monaco et au-delà.',
     contact_email: 'Email',
+    contact_phone: 'Telephone',
     contact_location: 'Localisation',
     contact_location_val: 'Nice & Monaco, Côte d\'Azur',
     copyright: '© 2026 Directeur Senior UX/UI & Designer Front-End. Tous droits réservés.'
@@ -185,6 +187,43 @@ function applyLang(lang){
 document.addEventListener('DOMContentLoaded', ()=>{
   const saved = localStorage.getItem('site-lang') || 'en';
   applyLang(saved);
+  const backToTopButton = document.querySelector('.back-to-top');
+
+  function animateScrollTo(top, duration = 1100) {
+    const start = window.pageYOffset || document.documentElement.scrollTop;
+    const delta = top - start;
+    const startTime = performance.now();
+
+    function easeInOutCubic(t) {
+      return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    }
+
+    function step(now) {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = easeInOutCubic(progress);
+      window.scrollTo(0, start + delta * eased);
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    }
+
+    window.requestAnimationFrame(step);
+  }
+
+  function updateBackToTopVisibility() {
+    if (!backToTopButton) return;
+    const shouldShow = (window.pageYOffset || document.documentElement.scrollTop) > 260
+      && !document.body.classList.contains('menu-open');
+    backToTopButton.classList.toggle('is-visible', shouldShow);
+  }
+
+  if (backToTopButton) {
+    backToTopButton.addEventListener('click', () => animateScrollTo(0));
+    updateBackToTopVisibility();
+    window.addEventListener('scroll', updateBackToTopVisibility, { passive: true });
+  }
+
   const sel = document.getElementById('lang-select');
   if(sel){
     sel.addEventListener('change', ()=>applyLang(sel.value));
@@ -205,6 +244,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   function clearMenuLockStyles() {
     document.documentElement.classList.remove('menu-open');
     document.body.classList.remove('menu-open');
+    updateBackToTopVisibility();
   }
 
   function smoothScrollToTarget(target) {

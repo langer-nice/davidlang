@@ -84,6 +84,17 @@
   color: $ink;
   cursor: pointer;
   appearance: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+
+  &:focus-visible {
+    transform: translateY(-1px);
+    outline: 2px solid rgba($navy, 0.22);
+    outline-offset: 2px;
+  }
 }
 
 .lang-toggle {
