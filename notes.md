@@ -1,13 +1,16 @@
 SCSS compile : npx sass --watch scss:css
 
-Github : 
+# Github : 
 https://github.com/langer-nice/davidlang
 
-Vercel
+# Vercel
 https://vercel.com/david-lang/
 https://vercel.com/david-lang/davidlangdesign
 
-<!-- -------------------------  -->
+# Domain name
+https://ap.www.namecheap.com/
+
+z
 
 # Start prompt 
 
