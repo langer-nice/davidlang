@@ -56,6 +56,21 @@
   justify-content: center;
 }
 
+.credibility-band {
+  padding: 0.85rem 0;
+  border-top: 1px solid $line;
+  border-bottom: 1px solid $line;
+  background: color-mix(in srgb, $bg 96%, $white 4%);
+}
+
+.credibility-band-text {
+  margin: 0;
+  text-align: center;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: $ink-subtle;
+}
+
 #services.section {
   padding-top: 1.5rem;
 }
@@ -322,6 +337,12 @@
   max-width: 70ch;
 }
 
+.contact-note {
+  margin: 1rem 0 0;
+  color: $navy-ink-copy;
+  max-width: 62ch;
+}
+
 .contact-card {
   border: 1px solid $line-dark;
   border-radius: $radius;
@@ -332,6 +353,16 @@
 .contact-line {
   margin: 0 0 12px;
   color: $navy-ink-copy;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $navy-ink;
+    }
+  }
 
   strong {
     color: $navy-ink;

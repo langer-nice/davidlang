@@ -5,7 +5,7 @@ const translations = {
     hero_title: '<span class="hero-title-layout hero-title-layout-desktop"><span class="hero-title-line">Senior UX/UI &amp;</span><span class="hero-title-line">Front-End Designer</span></span><span class="hero-title-layout hero-title-layout-compact"><span class="hero-title-line">Senior UX/UI &amp;</span><span class="hero-title-line">Front-End Designer</span></span>',
     hero_lead: 'Designing complex digital systems for luxury travel and digital platforms.',
     hero_sublead: 'Based in Nice & Monaco — Available for selective freelance collaborations.',
-    view_work: 'View Work',
+    view_work: 'See Selected Projects',
     lets_talk: 'Let\'s Talk',
     nav_home: 'Home',
     nav_services: 'Services',
@@ -14,7 +14,8 @@ const translations = {
     nav_about: 'About',
     nav_contact: 'Contact',
     
-    services: 'What I Do',
+    credibility_band: '25+ years in digital product design · 12+ years in luxury travel · Experience with Silversea, Crystal Cruises / A&K and John Taylor',
+    services: 'How I Help Premium Businesses',
     service_1: 'UX Strategy & Complex Systems',
     service_1_desc: 'User flows, booking journeys, operational platforms.',
     service_2: 'UI Design & Design Systems',
@@ -73,6 +74,7 @@ const translations = {
     
     contact: 'Let\'s create something exceptional together',
     contact_lead: 'Available for selective collaborations with premium brands and businesses in Nice, Monaco, and beyond.',
+    contact_note: 'Need a clearer, more premium digital experience? Let\'s talk.',
     contact_email: 'Email',
     contact_phone: 'Telephone',
     contact_location: 'Location',
@@ -85,7 +87,7 @@ const translations = {
     hero_title: '<span class="hero-title-layout hero-title-layout-desktop"><span class="hero-title-line">Senior UX/UI &amp;</span><span class="hero-title-line">Front-End Designer</span></span><span class="hero-title-layout hero-title-layout-compact"><span class="hero-title-line">Senior UX/UI &amp;</span><span class="hero-title-line">Front-End Designer</span></span>',
     hero_lead: 'Conception de systèmes numériques complexes pour le luxe et les voyages.',
     hero_sublead: 'Basé à Nice & Monaco — Disponible pour des collaborations sélectives en freelance.',
-    view_work: 'Voir les projets',
+    view_work: 'Voir les projets sélectionnés',
     lets_talk: 'Parlons-en',
     nav_home: 'Accueil',
     nav_services: 'Services',
@@ -94,7 +96,8 @@ const translations = {
     nav_about: 'À propos',
     nav_contact: 'Contact',
     
-    services: 'Ce que je fais',
+    credibility_band: '25+ ans d\'expérience en design de produits digitaux · 12+ ans dans le secteur du voyage de luxe · Expérience chez Silversea, Crystal Cruises / A&K et John Taylor',
+    services: 'Comment j\'aide les entreprises premium',
     service_1: 'Stratégie UX & Systèmes Complexes',
     service_1_desc: 'Parcours utilisateur, systèmes de réservation, plateformes opérationnelles.',
     service_2: 'Design UI & Design Systems',
@@ -153,8 +156,9 @@ const translations = {
     
     contact: 'Créons quelque chose d\'exceptionnel ensemble',
     contact_lead: 'Disponible pour des collaborations sélectives avec des marques premium et entreprises à Nice, Monaco et au-delà.',
+    contact_note: 'Besoin d\'une expérience digitale plus claire et plus premium ? Parlons-en.',
     contact_email: 'Email',
-    contact_phone: 'Telephone',
+    contact_phone: 'Téléphone',
     contact_location: 'Localisation',
     contact_location_val: 'Nice & Monaco, Côte d\'Azur',
     copyright: '© 2026 Directeur Senior UX/UI & Designer Front-End. Tous droits réservés.'

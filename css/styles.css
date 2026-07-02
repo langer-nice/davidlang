@@ -642,6 +642,21 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
 }
 
+.credibility-band {
+  padding: 0.85rem 0;
+  border-top: 1px solid rgba(17, 20, 24, 0.12);
+  border-bottom: 1px solid rgba(17, 20, 24, 0.12);
+  background: color-mix(in srgb, #f5f2ec 96%, #fff 4%);
+}
+
+.credibility-band-text {
+  margin: 0;
+  text-align: center;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: rgba(17, 20, 24, 0.7);
+}
+
 #services.section {
   padding-top: 1.5rem;
 }
@@ -890,6 +905,12 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 70ch;
 }
 
+.contact-note {
+  margin: 1rem 0 0;
+  color: rgba(246, 243, 238, 0.84);
+  max-width: 62ch;
+}
+
 .contact-card {
   border: 1px solid rgba(246, 243, 238, 0.14);
   border-radius: 14px;
@@ -907,7 +928,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: color 0.2s ease;
 }
 .contact-line a:hover {
-  color: var(--accent-color, #f6f3ee);
+  color: #f6f3ee;
 }
 .contact-line strong {
   color: #f6f3ee;

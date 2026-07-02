@@ -1,5 +1,8 @@
 SCSS compile : npx sass --watch scss:css
 
+# Create branch : feature
+# Merge with main to publish to live server
+
 # Github : 
 https://github.com/langer-nice/davidlang
 
