@@ -56,21 +56,6 @@
   justify-content: center;
 }
 
-.credibility-band {
-  padding: 0.85rem 0;
-  border-top: 1px solid $line;
-  border-bottom: 1px solid $line;
-  background: color-mix(in srgb, $bg 96%, $white 4%);
-}
-
-.credibility-band-text {
-  margin: 0;
-  text-align: center;
-  font-size: 0.92rem;
-  line-height: 1.5;
-  color: $ink-subtle;
-}
-
 #services.section {
   padding-top: 1.5rem;
 }

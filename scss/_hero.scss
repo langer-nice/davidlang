@@ -68,10 +68,19 @@
 }
 
 .sublead {
+  margin: 0.9rem 0 0;
+  font-size: clamp(13px, 1.05vw, 15px);
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  // max-width: 46ch;
+  color: $ink-faint;
+}
+
+.hero-credibility {
   margin: 1.8rem 0 0;
+  max-width: 52ch;
   font-size: clamp(15px, 1.3vw, 17px);
   line-height: 1.45;
-  // max-width: 46ch;
   color: $muted;
 }
 
@@ -143,8 +152,14 @@
   }
 
   .sublead {
+    margin-top: 0.85rem;
+    font-size: 14px;
+  }
+
+  .hero-credibility {
     margin-top: 1.35rem;
     font-size: 16px;
+    max-width: 100%;
   }
 
   .hero-actions {

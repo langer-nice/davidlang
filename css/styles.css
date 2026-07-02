@@ -514,7 +514,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sublead {
+  margin: 0.9rem 0 0;
+  font-size: clamp(13px, 1.05vw, 15px);
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  color: rgba(17, 20, 24, 0.55);
+}
+
+.hero-credibility {
   margin: 1.8rem 0 0;
+  max-width: 52ch;
   font-size: clamp(15px, 1.3vw, 17px);
   line-height: 1.45;
   color: rgba(17, 20, 24, 0.62);
@@ -575,8 +584,13 @@ h1, h2, h3, h4, h5, h6 {
     font-size: clamp(20px, 6vw, 24px);
   }
   .sublead {
+    margin-top: 0.85rem;
+    font-size: 14px;
+  }
+  .hero-credibility {
     margin-top: 1.35rem;
     font-size: 16px;
+    max-width: 100%;
   }
   .hero-actions {
     margin-top: 2rem;
@@ -640,21 +654,6 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.credibility-band {
-  padding: 0.85rem 0;
-  border-top: 1px solid rgba(17, 20, 24, 0.12);
-  border-bottom: 1px solid rgba(17, 20, 24, 0.12);
-  background: color-mix(in srgb, #f5f2ec 96%, #fff 4%);
-}
-
-.credibility-band-text {
-  margin: 0;
-  text-align: center;
-  font-size: 0.92rem;
-  line-height: 1.5;
-  color: rgba(17, 20, 24, 0.7);
 }
 
 #services.section {
